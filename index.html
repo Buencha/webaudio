@@ -1,25 +1,19 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>memesound</title>
+	<link rel="stylesheet" href="style.css" >
 </head>
+
 <body style="margin:0;padding:0;">
-	<div style="width:100vw;height:100vh;background: -webkit-linear-gradient(top, #9dd53a 0%,#a1d54f 30%,#80c217 69%,#7cbc0a 100%);" onmousemove="osc.frequency.value = event.clientX; console.log(event.clientX);"></div>
+	<div class="background" tabindex="1"></div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+<script src="module.js"></script>
+
 </body>
 
-<script>
-	
-	var audio_context = window.AudioContext || window.webKitAudioContext ;
-
-	var con = new audio_context();
-	var osc = con.createOscillator();
-	
-	osc.connect(con.destination);
-
-	osc.frequency.value = 0;	
-
-	osc.start();
-
-</script>
 </html> 
