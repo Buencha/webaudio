@@ -9,7 +9,7 @@
 
 	lfo_amp.gain.value = 200;
 
-	osc.frequency.value = 300;	
+	osc.frequency.value = 10;	
 
 	lfo.frequency.value = 0.5;	
 
@@ -21,3 +21,10 @@
 	lfo.start();
 
 	osc.start();
+   
+	$(".background").mousemove(function (event){
+		osc.frequency.value = event.clientX;	
+		lfo.frequency.value = event.clientY * (Math.floor((Math.random() * 12) + 0.5));	
+
+	});
+  
