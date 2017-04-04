@@ -9,16 +9,17 @@
 
 	var amp = con.createGain();
 
-	amp.gain.value = 0.05;
+	amp.gain.value = 0;
 
 	osc.frequency.value = Math.random() * 225;
-	osc.type = "triangle";
-	
+	osc.type = "sine";
+	now = con.currentTime;	
 
 	osc.connect(amp);
 	amp.connect(con.destination);
-	
-	//osc.start();
+	amp.gain.linearRampToValueAtTime(0.1, now + 2);
+	amp.gain.linearRampToValueAtTime(0 , now + 4);
+	osc.start();
 
 	});
   
