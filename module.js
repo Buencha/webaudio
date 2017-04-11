@@ -21,10 +21,3 @@
 	lfo.start();
 
 	osc.start();
-   
-	$(".background").mousemove(function (event){
-		osc.frequency.value = event.clientX;	
-		lfo.frequency.value = event.clientY * (Math.floor((Math.random() * 12) + 0.5));	
-
-	});
-  
