@@ -15,6 +15,7 @@
 	
 	$(".background").mousemove(function(event) {
 		filter.frequency.value = event.clientX;
+		filter.Q.value = event.clientY / 5;
 	});
 		$(".background").keydown(function (){
 
