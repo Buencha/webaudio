@@ -22,11 +22,20 @@
 	// osc.frequency.value = osc.frequency.value + 10;
 
 	// });
-var slider1;
+var slider1, keyboard;
 nx.onload = function () {
 	slider1.on("*", slider1Changed);
+	keyboard.on("*", keyboard1Changed);
 };
 
 function slider1Changed(data){
 	osc.frequency.value = data.value;
 }
+
+function keyboard1Changed(data){
+	osc.frequency.value = midiFreq[data.note]
+;}
+
+var midiFreq = {
+	60:261.63,
+};
