@@ -9,10 +9,11 @@
 	osc.frequency.value = 440;
 
 	osc.type = "sawtooth"
+
 	osc.start();
 	// osc.connect(filter);
 	osc.connect(con.destination);
-	
+
 	// $(".background").mousemove(function(event) {
 	// 	filter.frequency.value = event.clientX;
 	// 	filter.Q.value = event.clientY / 5;
@@ -22,6 +23,7 @@
 	// osc.frequency.value = osc.frequency.value + 10;
 
 	// });
+
 var slider1, keyboard;
 nx.onload = function () {
 	slider1.on("*", slider1Changed);
@@ -39,3 +41,4 @@ function keyboard1Changed(data){
 var midiFreq = {
 	60:261.63,
 };
+ 
