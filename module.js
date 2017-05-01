@@ -6,7 +6,7 @@
 
 
 	var osc = con.createOscillator();
-	osc.frequency.value = 440;
+	
 
 	osc.type = "sawtooth"
 
@@ -24,14 +24,16 @@
 
 	// });
 
-var slider1, keyboard;
+var tilt;
 nx.onload = function () {
-	slider1.on("*", slider1Changed);
-	keyboard.on("*", keyboard1Changed);
+	tilt.on("*", tiltChanged);
+	
 };
 
-function slider1Changed(data){
-	osc.frequency.value = data.value;
+function tiltChanged(data){
+	console.log(data);
+	osc.frequency.value = data.x * 500;
+
 }
 
 function keyboard1Changed(data){
